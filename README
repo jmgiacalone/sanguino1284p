@@ -4,12 +4,19 @@ Runs with Arduino0023
 
 Background:
 
-Bootloader taken from https://github.com/maniacbug/mighty-1284p/tree/master/bootloaders/standard
-Fuses set according to http://stevesfixitshop.blogspot.com/2011/12/sanguinololu-13a-part-3not-out-of-woods.html
-Sanguino files based on http://code.google.com/p/sanguino/downloads/detail?name=Sanguino-0023r2.zip&can=2&q=
+-Bootloader taken from https://github.com/maniacbug/mighty-1284p/tree/master/bootloaders/standard
+-Fuses set according to http://stevesfixitshop.blogspot.com/2011/12/sanguinololu-13a-part-3not-out-of-woods.html
 
-You cannot use a USBTinyISP with a 1284p as that programmer cannot cope with more thsan 64k flash.
-The Pololu AVR-USB programmer works well, and in theory using another Arduino as ISP should also work.
+	Low 0xD6
+	High 0xDC
+	Ext  0xFD
+
+-Sanguino files based on http://code.google.com/p/sanguino/downloads/detail?name=Sanguino-0023r2.zip&can=2&q=
+
+-avrdude.conf edited to include 1284p
+
+-You cannot use a USBTinyISP with a 1284p as that programmer cannot cope with more thsan 64k flash.
+ The Pololu AVR-USB programmer works well, and in theory using another Arduino as ISP should also work.
 
 
 Instructions:
